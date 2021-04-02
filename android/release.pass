@@ -1,4 +1,4 @@
 keystore=../release.keystore
 storePassword=Ozjipf8u12
-keyAlias=steakhause
+keyAlias=key
 keyPassword=Ozjipf8u12
