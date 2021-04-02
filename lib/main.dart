@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:steakhaus/components/timer/timer.dart';
 import 'package:steakhaus/components/typeCard/type_card.dart';
 import 'package:steakhaus/components/typeCard/types.dart';
+import 'package:steakhaus/screens/steak.dart';
 
 void main() {
   runApp(MyApp());
@@ -64,11 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => Scaffold(
-                                body: SafeArea(
-                                    child: Column(
-                              children: [TimerWidget(time: roastingTypes[index].secondsOfCooking)],
-                            )))),
+                        builder: (context) => Steak(
+                              type: roastingTypes[index]
+                            )),
                   );
                 },
               );
