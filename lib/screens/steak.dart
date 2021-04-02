@@ -50,7 +50,7 @@ class Steak extends StatelessWidget {
               child: Row(
                 children: [
                   Item(
-                    text: '400 cal',
+                    text: '~680 cal',
                     icon: 'assets/fire.svg',
                   ),
                   Spacer(),
@@ -60,7 +60,7 @@ class Steak extends StatelessWidget {
                   ),
                   Spacer(),
                   Item(
-                    text: '300g',
+                    text: '~300 g',
                     icon: 'assets/weighing-machine.svg',
                   )
                 ],
