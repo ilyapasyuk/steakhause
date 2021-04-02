@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:steakhaus/components/timer/timer.dart';
 import 'package:steakhaus/components/typeCard/type_card.dart';
 import 'package:steakhaus/components/typeCard/types.dart';
 import 'package:steakhaus/screens/steak.dart';
