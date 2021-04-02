@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:steakhaus/components/item/item.dart';
 import 'package:steakhaus/components/timer/timer.dart';
 import 'package:steakhaus/components/typeCard/types.dart';
 
@@ -40,6 +41,27 @@ class Steak extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(24),
+              child: Row(
+                children: [
+                  Item(
+                    text: '400 cal',
+                    icon: 'assets/fire.svg',
+                  ),
+                  Spacer(),
+                  Item(
+                    text: '${(type.secondsOfCooking / 60).round()} min',
+                    icon: 'assets/alarm-clock.svg',
+                  ),
+                  Spacer(),
+                  Item(
+                    text: '300g',
+                    icon: 'assets/weighing-machine.svg',
                   )
                 ],
               ),
