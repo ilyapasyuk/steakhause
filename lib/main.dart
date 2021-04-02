@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:steakhaus/components/timer/timer.dart';
 import 'package:steakhaus/components/typeCard/type_card.dart';
 import 'package:steakhaus/components/typeCard/types.dart';
@@ -10,9 +10,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return MaterialApp(
       title: 'Flutter Demo',
-      theme: CupertinoThemeData(),
+      theme: ThemeData(),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -46,9 +46,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Select steak'),
+        backgroundColor: Color(0xFF1D2335),
+        elevation: 100,
+      ),
       backgroundColor: Color(0xFF1D2335),
-      child: SafeArea(
+      body: SafeArea(
         child: ListView.builder(
             padding: const EdgeInsets.all(24),
             itemCount: roastingTypes.length,
@@ -58,9 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    CupertinoPageRoute(
-                        builder: (context) => CupertinoPageScaffold(
-                                child: SafeArea(
+                    MaterialPageRoute(
+                        builder: (context) => Scaffold(
+                                body: SafeArea(
                                     child: Column(
                               children: [TimerWidget(time: roastingTypes[index].secondsOfCooking)],
                             )))),
